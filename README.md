@@ -48,10 +48,6 @@ CSE687_MapReduce/
 ├── output/
 ├── MapFunc.dll
 └── ReduceFunc.dll
-
-yaml
-Copy code
-
 ---
 
 ## Build Instructions
@@ -62,23 +58,23 @@ Copy code
 cl /EHsc /std:c++17 src\main.cpp /Fe:MapReduce.exe
 cl /EHsc /std:c++17 /LD src\ReduceFunc.cpp /Fe:ReduceFunc.dll
 cl /EHsc /std:c++17 /LD src\MapFunc.cpp /Fe:MapFunc.dll
- Linux (g++)
-bash
-Copy code
+```
+Linux (g++)
+```bash
 g++ -std=c++17 src/main.cpp -o MapReduce -ldl
 g++ -std=c++17 -shared -fPIC src/ReduceFunc.cpp -o ReduceFunc.so
 g++ -std=c++17 -shared -fPIC src/MapFunc.cpp -o MapFunc.so
+```
 Execution
 Run the program using:
 
-bash
-Copy code
+```bash
 MapReduce.exe <input_dir> <temp_dir> <output_dir> MapFunc.dll ReduceFunc.dll
+```
 Example:
-
-bash
-Copy code
+```
 MapReduce.exe input temp output MapFunc.dll ReduceFunc.dll
+```
 Program Flow
 main.cpp dynamically loads the Map and Reduce DLLs.
 
@@ -119,6 +115,6 @@ Uses LoadLibraryA and GetProcAddress (Windows) or dlopen and dlsym (Linux) to lo
 
 Authors
 David Zapata
-
+Sean Cooke
 Lorenzo Mujica
 
