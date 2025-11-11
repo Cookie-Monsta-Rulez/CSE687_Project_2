@@ -26,30 +26,6 @@ The framework mimics Google’s MapReduce model:
 
 ## Directory Structure
 
-CSE687_MapReduce/
-├── include/
-│ ├── FileManagement.h
-│ ├── FileManagement2.h
-│ ├── FMAdapter.h
-│ ├── Reducer.h
-│ └── Mapper.h
-│
-├── src/
-│ ├── main.cpp
-│ ├── Reducer.cpp
-│ ├── MapFunc.cpp
-│ ├── ReduceFunc.cpp
-│ └── FileManagement.cpp
-│
-├── input/
-│ └── pg100.txt
-│
-├── temp/
-├── output/
-├── MapFunc.dll
-└── ReduceFunc.dll
----
-
 ## Build Instructions
 
 ### Windows (MSVC)
